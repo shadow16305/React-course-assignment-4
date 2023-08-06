@@ -22,14 +22,10 @@ const NewExpense = (props) => {
     const cancelHandler = () => {
         setFormIsOpen(false);
     };
-
-const submitExpenseHandler = () => {
-    setFormIsOpem(false);
-};
     
     return (
         <div className='new-expense'>
-            {formOpen && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} cancel={cancelHandler} submit={submitExpenseHandler} />}
+            {formOpen && <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} cancel={cancelHandler} />}
             {!formOpen && <button onClick={addExpenseHandler}>Add Expense</button>}
         </div>
     );
